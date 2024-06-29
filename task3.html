@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3</title>
+
+</head>
+<body>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+
+        }
+        .container{
+            position: relative;
+            min-height: 100vh;
+            background: rgb(183, 227, 255);
+        }
+        .container h1{
+            color:blue;
+            font-size: 50px;
+            text-align: center;
+            font-weight: bolder;
+
+        }
+        .container .image-con{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .container .image-con .image{
+            height: 250px;
+            width: 350px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px black;
+          cursor: pointer;
+          border: 10px solid white;
+        }
+        .container .image-con .image img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .2s linear;
+        }
+        .container .image-con .image:hover img{
+            transform: scale(1.1);
+        }
+        .container .popup-img{
+            position: fixed;
+            top: 0; left: 0;
+            background: #000000ab;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+        .container .popup-img span{
+            position: absolute;
+            top: 0; right: 10px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            cursor: pointer;
+        }
+        .container .popup-img img{
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid white;
+            border-radius: 5px;
+            width: 750px;
+            object-fit: cover;
+        }
+        @media (max-width:768px){
+            .container .popup-img img{
+                width: 95%;
+            }
+
+        }
+        
+    </style>
+    <div class="container">
+        <h1>Image Gallery</h1>
+        <div class="image-con">
+            <div class="image"><img src="C:\Users\HP\Downloads\523886e111841c9e76b7a3db4321b925.jpg" alt="loading" ></div>
+            <div class="image"><img src="C:\Users\HP\Downloads\16x10-Emerald-lake-1.jpg" alt="loading" ></div>
+            <div class="image"><img src="C:\Users\HP\Downloads\RatioImage_43.jpg." alt="loading" ></div>
+            <div class="image"><img src="C:\Users\HP\Downloads\breathtaking_nature-wallpaper-1600x1200.jpg" alt="loading" ></div>
+            <div class="image"><img src="C:\Users\HP\Downloads\landscape_mountains_sun_140434_300x255.jpg" alt="loading" ></div>
+            <div class="image"><img src="C:\Users\HP\Downloads\Aspect-ratio-photography-balakot-Pakistan-1.webp" alt="loading" ></div>
+        </div>
+        <div class="popup-img">
+            <span>&times;</span>
+            <img src="C:\Users\HP\Downloads\523886e111841c9e76b7a3db4321b925.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.image-con img').forEach(image =>{
+            image.onclick =() =>{
+                document.querySelector('.popup-img').style.display ='block';
+                document.querySelector('.popup-img img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-img span').onclick =() =>{
+            document.querySelector('.popup-img').style.display='none';
+        }
+    </script>
+</body>
+</html>

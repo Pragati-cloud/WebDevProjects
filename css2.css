@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(https://img.freepik.com/free-vector/cloudy-watercolor-background_91008-457.jpg?semt=ais_hybrid);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    
+}
+h1{
+    font-size: 50px;
+
+    color: rgb(148, 58, 136);
+    margin-left: 40%;
+    margin-top: 10%;
+}
+h2{
+    font-size: 100px;
+
+    color: rgb(110, 41, 101);
+    margin-left: 50%;
+
+}
+button{
+    
+    border:none;
+    padding-top: 10px;
+    color:white;
+    font-weight: bold;
+    width: 170px;
+    margin-left: 46%;
+    border-radius:4px ;
+    font-size: 1.7em;
+    padding-bottom:5px ;
+    
+}
+#increment-btn, #savebtn ,#reset{
+    background:rgba(220, 20, 203, 0.689);
+}
+#savebtn , #reset{
+    margin-top: 10px;
+}
+h3{
+    color: rgb(158, 88, 142);
+    margin: 30px;
+    margin-left: 46%;
+}

@@ -1,0 +1,13 @@
+{
+    "manifest_version":3,
+    "version":"1.1",
+    "name":"Leads tracker",
+    "description":"Leads tracker is a simple Chrome extension to save and organize important links or your current tab with a single click. Access and manage your bookmarks easily anytime!",
+    "action":{
+        "default_popup":"index.html",
+        "default_icon":"exclamation.png"
+    },
+    "permissions":[
+        "tabs"
+    ]
+}
